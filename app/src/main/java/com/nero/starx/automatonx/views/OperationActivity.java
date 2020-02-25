@@ -1,5 +1,6 @@
 package com.nero.starx.automatonx.views;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,6 +16,7 @@ public class OperationActivity extends AppCompatActivity {
     ActivityOperationBinding operationBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setTheme(R.style.Light);
         operationBinding = DataBindingUtil.setContentView(this , R.layout.activity_operation);
@@ -26,11 +28,13 @@ public class OperationActivity extends AppCompatActivity {
     View.OnClickListener operationListener = (v) -> {
         operationBinding.getCheckerViewModel().StartOperation();
         if(operationBinding.getCheckerViewModel().isEncluded()){
-            operationBinding.layout.setBackgroundColor(getColor(R.color.SuccessPrimary));
-            operationBinding.output.setText("This word belongs to the automate");
+
+            operationBinding.output.setText("Ce mot appartient à l'Automate");
+            operationBinding.output.setTextColor(Color.GREEN);
         }else{
-            operationBinding.layout.setBackgroundColor(getColor(R.color.FailurePrimary));
-            operationBinding.output.setText("This word does not belong to the automate");
+
+            operationBinding.output.setText("Ce mot n'appartient pas à l'Automate");
+            operationBinding.output.setTextColor(Color.RED);
         }
     };
 }

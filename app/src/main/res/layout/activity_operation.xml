@@ -11,13 +11,13 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/automate2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".views.OperationActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@drawable/activity_background"
+
             android:elevation="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,8 +32,9 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Input your word here to check belonging"
+                android:text="Saisissez votre mot !"
                 android:textAlignment="center"
+                android:textColor="#1BE5EA"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +59,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="word example: aabf"
+                    android:hint="Exemple d'un mot : aabbab"
                     android:text="@={CheckerViewModel.word}" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,11 +69,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/button_background"
-                android:drawableStart="@drawable/ic_check"
+
                 android:elevation="3dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:text="   check word"
+                android:text="Testez ! "
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
