@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.success" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/SuccessAccent</item>
+        <item name="colorPrimaryDark">@color/SuccessPrimaryDark</item>
+        <item name="colorAccent">@color/SuccessAccent</item>
+    </style>
+
+    <style name="AppTheme.failure" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/FailureAccent</item>
+        <item name="colorPrimaryDark">@color/FailurePrimaryDark</item>
+        <item name="colorAccent">@color/FailureAccent</item>
+    </style>
+
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="colorPrimaryDark" >@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

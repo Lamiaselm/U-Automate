@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="TransitionViewModel"
+            type="com.nero.starx.automatonx.viewmodels.TransitionViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.MatrixActivity">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transition matrix"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/activity_background"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/state12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/state22"
+                app:layout_constraintEnd_toEndOf="@+id/state22"
+                app:layout_constraintStart_toStartOf="@+id/state22"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element12"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toTopOf="@+id/element22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition12}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/element12"
+                    app:layout_constraintEnd_toStartOf="@+id/element12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/element12">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition11}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element13"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/element12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/element12"
+                    app:layout_constraintTop_toTopOf="@+id/element12">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition13}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element22"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition22}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element32"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/element22">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition32}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element31"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/element32"
+                    app:layout_constraintEnd_toStartOf="@+id/element32"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/element32">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition31}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element33"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/element32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/element32"
+                    app:layout_constraintTop_toTopOf="@+id/element32">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition33}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element21"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/element22"
+                    app:layout_constraintEnd_toStartOf="@+id/element22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/element22">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition21}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/element23"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/element22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/element22"
+                    app:layout_constraintTop_toTopOf="@+id/element22">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hint"
+                        android:text="@={TransitionViewModel.transition23}" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/state32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="@+id/state22"
+                app:layout_constraintStart_toStartOf="@+id/state22"
+                app:layout_constraintTop_toBottomOf="@+id/state22" />
+
+            <TextView
+                android:id="@+id/state1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/state2"
+                app:layout_constraintEnd_toStartOf="@+id/state2"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@+id/state2" />
+
+            <TextView
+                android:id="@+id/state3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/state2"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                app:layout_constraintStart_toEndOf="@+id/state2"
+                app:layout_constraintTop_toTopOf="@+id/state2" />
+
+            <TextView
+                android:id="@+id/state2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout" />
+
+            <Button
+                android:id="@+id/confirm_automate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/button_background"
+                android:drawableStart="@drawable/ic_cnfm_automat"
+                android:elevation="3dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="  Confirm automaton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/state22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
